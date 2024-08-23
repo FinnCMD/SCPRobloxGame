@@ -1,0 +1,13 @@
+local Players = game:GetService("Players")
+
+
+local function onPlayerAdded(player)
+	
+	local role = Instance.new("StringValue")
+	role.Name = "Role"
+	role.Value = "Class-D"  
+	role.Parent = player
+end
+
+
+Players.PlayerAdded:Connect(onPlayerAdded)
