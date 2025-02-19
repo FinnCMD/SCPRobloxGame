@@ -8,7 +8,6 @@ local humanoid = character:WaitForChild("Humanoid")
 local walkSpeed = 16
 local sprintSpeed = 30
 
--- Function to update walk speed
 local function updateWalkSpeed(isSprinting)
 	if isSprinting then
 		humanoid.WalkSpeed = sprintSpeed
@@ -17,7 +16,6 @@ local function updateWalkSpeed(isSprinting)
 	end
 end
 
--- Sprint
 UserInputService.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.LeftShift then
 		updateWalkSpeed(true)
